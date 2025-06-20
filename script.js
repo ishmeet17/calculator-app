@@ -71,3 +71,27 @@ function toggleSign() {
     display.innerText = "Error";
   }
 }
+
+// Calculate percentage (e.g., "50" becomes "0.5")
+function percentage() {
+  try {
+    let value = eval(display.innerText);
+    display.innerText = value / 100;
+  } catch {
+    display.innerText = "Error";
+  }
+}
+
+// Clear Entry (only clears the last number, not the full expression)
+function clearEntry() {
+  try {
+    let expression = display.innerText;
+
+    // Use regex to remove the last number or decimal from the expression
+    let newExpr = expression.replace(/[\d.]+(?=[^\d.]*$)/, '');
+
+    display.innerText = newExpr || "0";
+  } catch {
+    display.innerText = "Error";
+  }
+}
