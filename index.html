@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Windows Style Calculator</title>
+  <link rel="stylesheet" href="C:\Users\ishme\Desktop\Code\style.css" />
+</head>
+<body>
+  <!-- Welcome Popup -->
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to the Calculator!</h2>
+      <p>Start calculating with all basic and advanced functions.</p>
+      <button onclick="closeWelcome()">Start</button>
+    </div>
+  </div>
+
+    <!-- Calculator UI -->
+  <div class="calculator">
+    <div id="display">0</div>
+    <div class="buttons">
+      <button>%</button>
+      <button>CE</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="backspace()">⌫</button>
+
+      <button onclick="reciprocal()">1/x</button>
+      <button onclick="square()">x²</button>
+      <button onclick="squareRoot()">√</button>
+      <button onclick="append('/')">÷</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('*')">×</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')">−</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('+')">+</button>
+
+      <button onclick="toggleSign()">±</button>
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="C:\Users\ishme\Desktop\Code\script.js"></script>
+</body>
+</html>
